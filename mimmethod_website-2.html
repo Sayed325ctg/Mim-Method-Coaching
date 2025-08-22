@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MIM METHOD Coaching Center</title>
+  <style>
+    * {margin: 0; padding: 0; box-sizing: border-box;}
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #fbc2eb, #a6c1ee);
+      color: #333;
+      line-height: 1.6;
+    }
+    header {
+      background: linear-gradient(90deg, #2193b0, #6dd5ed);
+      color: #fff;
+      padding: 40px 20px;
+      text-align: center;
+      border-bottom-left-radius: 50% 20%;
+      border-bottom-right-radius: 50% 20%;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+    header h1 {font-size: 3rem; font-weight: bold;}
+    header p {font-size: 1.3rem; margin-top: 10px;}
+
+    section {
+      padding: 50px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+    .about, .blog, .form-section {
+      background: #ffffffcc;
+      border-radius: 20px;
+      padding: 40px;
+      margin-bottom: 40px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+    .about:hover, .blog:hover, .form-section:hover {transform: scale(1.02);}
+    .about h2, .blog h2, .form-section h2 {margin-bottom: 20px; font-size: 2rem;}
+    .about h2 {color: #ff4081;}
+    .blog h2 {color: #8e44ad;}
+    .form-section h2 {color: #2193b0; text-align: center;}
+    .about p, .about ul, .blog p, .blog ul {font-size: 1.1rem; margin-bottom: 15px;}
+    .about ul, .blog ul {list-style: disc; padding-left: 25px;}
+
+    form label {display: block; margin: 10px 0 5px; font-weight: bold;}
+    form input, form textarea, form select {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      font-size: 1rem;
+    }
+    form button {
+      background: linear-gradient(90deg, #ff6a00, #ee0979);
+      color: white;
+      padding: 15px;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      font-size: 1.1rem;
+      width: 100%;
+      font-weight: bold;
+      transition: background 0.3s, transform 0.2s;
+    }
+    form button:hover {background: linear-gradient(90deg, #ee0979, #ff6a00); transform: translateY(-2px);}
+
+    footer {
+      background: linear-gradient(90deg, #2193b0, #6dd5ed);
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+      margin-top: 50px;
+      border-top-left-radius: 50% 20%;
+      border-top-right-radius: 50% 20%;
+    }
+    footer p {margin: 8px 0; font-size: 1rem;}
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      header h1 {font-size: 2rem;}
+      header p {font-size: 1rem;}
+      .about, .form-section, .blog {padding: 25px;}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>MIM METHOD Coaching Center</h1>
+    <p>Inspiring Excellence from Class 6 to HSC</p>
+  </header>
+
+  <section class="about">
+    <h2>About Us</h2>
+    <p>Welcome to <strong>MIM METHOD</strong>, a well-known and trusted coaching center dedicated to helping students achieve academic success. We nurture young minds from <strong>Class 6 to Class 12</strong>, ensuring a strong foundation for both <strong>SSC</strong> and <strong>HSC</strong> levels.</p>
+    <p>Our Expertise:</p>
+    <ul>
+      <li>Classes 6–8: Mathematics & English (First & Second Paper)</li>
+      <li>SSC (Classes 9–10): Mathematics & English</li>
+      <li>HSC (Classes 11–12): English & ICT</li>
+    </ul>
+    <p>At <strong>MIM METHOD</strong>, we believe education is not just about passing exams but about empowering students to lead brighter futures with confidence and skill.</p>
+  </section>
+
+  <section class="blog">
+    <h2>Our Teaching Approach</h2>
+    <p>I provide dedicated coaching for students of classes 6 to 8, SSC (9–10), and HSC (11–12) with a strong focus on building a solid foundation and ensuring academic success. My teaching covers:</p>
+    <ul>
+      <li><strong>English 1st & 2nd Paper:</strong> Grammar, Writing, Literature, and Skills Development</li>
+      <li><strong>Mathematics:</strong> Concepts, Problem Solving, Exam Techniques</li>
+      <li><strong>ICT (for HSC students):</strong> Clear explanation of theory with practical understanding</li>
+    </ul>
+    <p>To ensure students stay exam-ready, I conduct weekly mock tests, which help track progress, improve time management, and build confidence.</p>
+    <p>I focus on clear explanations, step-by-step problem solving, and personalized guidance so that every student can learn effectively, no matter their starting point. My goal is not only to prepare students for exams but also to strengthen their knowledge for future success.</p>
+  </section>
+
+  <section class="form-section">
+    <h2>Student Admission Form</h2>
+    <form onsubmit="submitForm(event)">
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="class">Class</label>
+      <select id="class" name="class" required>
+        <option value="">Select Class</option>
+        <option value="6">Class 6</option>
+        <option value="7">Class 7</option>
+        <option value="8">Class 8</option>
+        <option value="9">Class 9 (SSC)</option>
+        <option value="10">Class 10 (SSC)</option>
+        <option value="11">Class 11 (HSC)</option>
+        <option value="12">Class 12 (HSC)</option>
+      </select>
+
+      <label for="subject">Subject</label>
+      <input type="text" id="subject" name="subject" placeholder="e.g. Math, English, ICT" required>
+
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" name="phone" required>
+
+      <label for="message">Additional Information</label>
+      <textarea id="message" name="message" rows="4" placeholder="Write here..."></textarea>
+
+      <button type="submit">Submit Application</button>
+    </form>
+  </section>
+
+  <footer>
+    <p><strong>Contact Us:</strong></p>
+    <p>Phone/WhatsApp: +8801814273573</p>
+    <p>Email: jamshedkhokon@gmail.com</p>
+    <p>Address: 3no Raipur Union, Anowara, Chattogram, Bangladesh</p>
+    <p>&copy; 2025 MIM METHOD Coaching Center | All Rights Reserved</p>
+  </footer>
+
+  <script>
+    function submitForm(e) {
+      e.preventDefault();
+      alert("Thank you for applying to MIM METHOD! We will contact you soon.");
+    }
+  </script>
+</body>
+</html>
